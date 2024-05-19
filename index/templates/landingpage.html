@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Craft Hub - Home
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'landingpage.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="mt-3 text-center display-2 fw-normal">Craft Categories</h1>
+
+  <div class="row mt-5 justify-content-around">
+    <div class="col-md-5">
+      <div class="card card--1">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Woodworking' %}" class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Woodworking' %}">
+            <h3 class="card__title">Woodworking</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card card--2">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Painting' %}" class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Painting' %}">
+            <h3 class="card__title">Painting</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 justify-content-around">
+    <div class="col-md-5">
+      <div class="card card--3">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Knitting' %}"  class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Knitting' %}">
+            <h3 class="card__title">Knitting</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="card card--4">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Ceramics' %}" class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Ceramics' %}" >
+            <h3 class="card__title">Ceramics</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 justify-content-around">
+    <div class="col-md-5">
+      <div class="card card--5">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Jewelry Making' %}"  class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Jewelry Making' %}">
+            <h3 class="card__title">Jewelry Making</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="card card--6">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Origami' %}" class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Origami' %}" >
+            <h3 class="card__title">Origami</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 justify-content-around">
+    <div class="col-md-5">
+      <div class="card card--7">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Embroidery' %}"  class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Embroidery' %}">
+            <h3 class="card__title">Embroidery</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="card card--8">
+        <div class="card__img"></div>
+        <a href="{% url 'core:product_category' category='Pottery' %}" class="card_link"><div class="card__img--hover"></div></a>
+        <div class="card__info">
+          <a class="card__category text-center" href="{% url 'core:product_category' category='Pottery' %}" >
+            <h3 class="card__title">Pottery</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<style>
+  .card--1 .card__img,
+  .card--1 .card__img--hover {
+    background-image: url('{% static "index-images/woodworking-front.jpg" %}');
+  }
+
+  .card--2 .card__img,
+  .card--2 .card__img--hover {
+    background-image: url('{% static "index-images/painting-front.jpg" %}');
+  }
+
+  .card--3 .card__img,
+  .card--3 .card__img--hover {
+    background-image: url('{% static "index-images/knitting-front.jpg" %}');
+  }
+
+  .card--4 .card__img,
+  .card--4 .card__img--hover {
+    background-image: url('{% static "index-images/ceramics-front.jpg" %}');
+  }
+
+  .card--5 .card__img,
+  .card--5 .card__img--hover {
+    background-image: url('{% static "index-images/jewelrymaking-front.jpg" %}');
+  }
+
+  .card--6 .card__img,
+  .card--6 .card__img--hover {
+    background-image: url('{% static "index-images/origami-front.jpg" %}');
+  }
+
+  .card--7 .card__img,
+  .card--7 .card__img--hover {
+    background-image: url('{% static "index-images/embroidery-front.jpg" %}');
+  }
+
+  .card--8 .card__img,
+  .card--8 .card__img--hover {
+    background-image: url('{% static "index-images/pottery-front.jpg" %}');
+  }
+
+</style>
+{% endblock %}

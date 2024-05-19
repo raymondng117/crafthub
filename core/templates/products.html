@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Craft Hub - Sign In
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'products.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="wrapper">
+    <h1 class="mt-3 text-center display-2 fw-normal">{{ category }}</h1>
+    <div class="d-flex flex-column flex-lg-row m-5 justify-content-around">
+      {% for product in products %}
+      <a href="{% url 'core:product_details' product.id %}" class="col-lg-3 col-12 my-3 product-card-link">
+        <div class="container">
+          <div class="front" style="background-image: url('{{ product.image_url }}')">
+            <div class="inner">
+              <p>{{ product.name }}</p>
+              <span>Price: ${{ product.price }}</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p class="fw-bold">{{ product.description }}</p>
+              <button class="btn btn-secondary">Product details</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+  <script>
+    // Any additional JavaScript code goes here
+  </script>
+{% endblock %}

@@ -1,0 +1,33 @@
+/* Style the sign-up form */
+.form-signup {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Style the form elements */
+.form-signup input[type="text"],
+.form-signup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-signup button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-signup button:hover {
+    background-color: #0056b3;
+}

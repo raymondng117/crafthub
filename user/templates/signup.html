@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Craft Hub - Sign Up{% endblock %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="form-signup" method="post">
+                <h1 class="display-2 fw-normal text-center">Sign Up</h1>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Username:</label>
+                    {{ form.username }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password1" class="form-label">Password:</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password2" class="form-label">Confirm Password:</label>
+                    {{ form.password2 }}
+                </div>
+                <button class="w-100 btn btn-lg btn-primary my-3" type="submit">Sign Up</button>
+                <p class="mt-3 mb-3 text-muted fw-bold">If you have an account, click <a href="{% url 'user:signin' %}">here</a> to sign in first.</p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+</script>
+{% endblock %}

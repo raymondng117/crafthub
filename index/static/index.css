@@ -1,0 +1,35 @@
+body {
+    color: #868686;
+  }
+
+  /* Custom CSS for nav links */
+.navbar-nav .nav-link {
+    font-size: 1.1rem; /* Increase font size */
+    transition: color 0.3s; /* Add transition effect for color change */
+  }
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+    text-decoration: none; /* Remove default underline */
+  }
+
+.navbar-nav .nav-link::after {
+    content: ''; /* Add pseudo-element */
+    display: block; /* Make it a block element */
+    width: 0; /* Initially width is 0 */
+    height: 2px; /* Height of underline */
+    background-color: #007bff; /* Color of underline */
+    transition: width 0.3s; /* Add transition effect for width change */
+  }
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Increase width on hover */
+  }
+
+.account-link {
+  text-decoration: none;
+}
+
+.navbar-nav {
+  align-items: center;
+}
